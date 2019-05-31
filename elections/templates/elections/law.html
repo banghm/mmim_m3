@@ -1,0 +1,146 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MMIM - 전자 근로 계약서</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500i" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- 메인 맨윗부분 -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="main.html">MMIM</a>
+    </div>
+  </nav>
+
+
+  <!-- 회원가입 -->
+  <section id="회원가입">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 text-center">
+
+          <h2 class="section-heading">이용약관 및 개인정보 수집 동의</h2>
+        </div>
+          <p>  </p>
+      </div>
+
+
+
+      <div class="col-lg-7">
+        <div class="col-lg-56 text-center">
+          <form id="회원가입Form" name="sentMessage" novalidate="novalidate" margin-center>
+
+
+              <div class="col-md-12 text-right" >
+
+          <div class="form-group">
+             </div>
+
+
+
+        <textarea rows = 10; cols=70; text-align = center;>
+귀하가 본 서비스를 이용하기 위해서는 MMIM 계정이 필요할 수 있습니다.
+귀하가 MMIM 계정을 직접 만들 수도 있고, 고용주 또는 교육기관과 같은 관리자가 귀하에게 MMIM 계정을 배정할 수도 있습니다. 관리자가 배정한 MMIM 계정을 사용하고 있는 경우, 별도의 약관 또는 추가약관이 적용될 수 있으며 관리자가 귀하의 계정에 액세스하거나 계정을 해지할 수 있습니다.
+
+MMIM 계정을 보호하려면 비밀번호를 비공개로 유지하십시오. 귀하는 MMIM 계정에서 또는 MMIM 계정을 통해 이루어지는 활동에 대한 책임이 있습니다. 타사 애플리케이션에서 MMIM 계정 비밀번호를 재사용하지 마십시오. 귀하의 비밀번호나 MMIM 계정이 무단으로 사용되고 있음을 알게 되는 경우 다음 도움말을 참조하시기 바랍니다.
+
+                  </textarea>
+
+                   <p class="help-block text-danger"></p>
+                  <input type="checkbox" name="chk_info" value="HTML" style="margin-right:5px;"> 동의
+                     <p class="help-block text-danger"></p>
+
+                   <p class="help-block text-danger"></p>
+
+
+          <textarea rows = 10 cols=70>
+              < 전자서명법 제 3조 제 3항 >
+              공인전자서명 외의 전자서명은 당사자간의 약정에 따른 서명, 서명날인 또는 기명 날인으로서 효력을 가진다.
+
+                  </textarea>
+
+                   <p class="help-block text-danger"></p>
+                  <input type="checkbox" name="chk_info" value="HTML" style="margin-right:5px;"> 동의
+                     <p class="help-block text-danger"></p>
+       <p class="help-block text-danger"></p>
+
+             <textarea rows = 10 cols=70>
+                 < 전자문서 및 전자거래기본법 제 4조 제 1항 >
+                 전자문서는 다른 법률에 특별한 규정이 있는 경우를 제외하고 전자적 형태로 되어있다는 이유로 문서로서의 효력이 부인되지 아니한다.
+                  </textarea>
+
+                   <p class="help-block text-danger"></p>
+                  <input type="checkbox" name="chk_info" value="HTML" style="margin-right:5px;"> 동의
+                     <p class="help-block text-danger"></p>
+        </div>
+
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                  <button type="button" onclick="alert('전부 동의하셨으면 회원가입이 완료됩니다.')"><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="joinsuccess.html">회원가입하기</a></button>
+
+            <p><br></p>
+
+              </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Your Website 2019</span>
+        </div>
+       <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Computer Information Engineering</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">MMIM</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- 회원가입 form JavaScript -->
+  <script src="mmim/join.js"></script>
+  <script src="mmim/join2.js"></script>
+
+
+</body>
+
+</html>

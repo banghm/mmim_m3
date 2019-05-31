@@ -1,0 +1,10 @@
+{% for data in datas %}
+    {{data.employer.name}} {{data.employee.name}} <button id='{{data}}.id' onclick="a({{data.employer.id}},{{data.employee.id}})">조회</button>
+{% endfor %}
+
+<script>
+    function a(x, y){
+        var url =  "/elections/show/contract/" +x +"/" + y;
+        window.location.href = url;
+    }
+</script>

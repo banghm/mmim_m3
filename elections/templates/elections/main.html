@@ -1,0 +1,319 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MMIM - 전자 근로 계약서</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500i" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+
+  <!-- 메인 맨윗부분 -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="main.html" data-role="button">MMIM</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+	  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        MENU 
+        <i class="fas fa-bars"></i>
+      </button>
+      {{request.session.name}}님 
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#">서비스소개</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'elections:contract' %}">계약서작성</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#">장점</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'elections:login' %}">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'elections:logout' %}">로그아웃</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'elections:register' %}">회원가입</a>
+          </li>
+           </li>
+            <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url 'elections:show-my-contract' %}">내 계약서 조회</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Electronic Labor Contract Based On Block Chain</div>
+        <div class="intro-heading text-uppercase">블록체인 기반 전자 근로계약서</div>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{% url 'elections:contract' %}">계약서 작성하기</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 서비스소개 -->
+  <section id="서비스소개">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">서비스 소개</h2>
+          <h3 class="section-subheading text-muted">MMIM SERVICE INTRODUCE</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">블록체인</h4>
+          <p class="text-muted">블록체인을 기반으로 하여 투명성있는 거래를 하여 더 믿고 사용할 수 있습니다.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">편리함</h4>
+          <p class="text-muted">휴대성있고 더욱 더 간편하게 할 수 있는 계약서 작성이 가능합니다.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">본인확인</h4>
+          <p class="text-muted">최대 3번의 본인확인을 통해 더욱 더 안전한 계약서 작성 및 보관이 가능합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 계약서작성 -->
+  <section id="계약서작성">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">계약서 작성</h2>
+          <h3 class="section-subheading text-muted">Order Of MMIM Electronic Labor Contract</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/계약서작성/1.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <p></p>
+                    <p></p>
+                    <h4>회원가입</h4>
+                  </div>
+                <div class="timeline-body">
+                  <p class="text-muted">계약서 작성을 위한 첫 번째 단계! 이름, 연락처 등의 개인정보를 적고 회원가입을 한다. </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/계약서작성/2.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <p></p>
+                    <p></p>
+                  <h4>계약서 작성</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">흔히 알고 있는 계약서 형태의 전자 문서를 작성하는 단계이다. 각각의 체크박스를 클릭하여 작성한다.</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/계약서작성/3.jpg" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <p></p>
+                    <p></p>
+                  <h4>서명</h4>
+              </div>
+                <div class="timeline-body">
+                  <p class="text-muted">계약서에 서명을 할 때, 이메일 인증, 접근암호 인증, 휴대폰 본인 인증 최대 3번의 본인 확인을 함으로써 보안성을 높힐 수 있다.</p>
+                </div>
+              </div>
+            </li>
+           <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4><br>계약서 작성 완료!</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- 장점 Grid -->
+  <section class="bg-light" id="장점">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">장점</h2>
+          <h3 class="section-subheading text-muted">Advantages Of Electronic Labor Contract</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4 col-sm-6 장점-item">
+          <a class="장점-link" data-toggle="modal" href="#장점Modal1">
+            <div class="장점-hover">
+              <div class="장점-hover-content">
+
+              </div>
+            </div>
+            <img class="img-fluid" src="img/장점/01-thumbnail.jpg" alt="">
+          </a>
+          <div class="장점-caption">
+              <p></p>
+            <h4>신뢰성 보장</h4>
+           <p class="text-muted">Ensure Reliability</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 장점-item">
+          <a class="장점-link" data-toggle="modal" href="#장점Modal2">
+            <div class="장점-hover">
+              <div class="장점-hover-content">
+
+              </div>
+            </div>
+            <img class="img-fluid" src="img/장점/02-thumbnail.jpg" alt="">
+          </a>
+          <div class="장점-caption">
+              <p></p>
+            <h4>스마트 컨트렉트</h4>
+			<p class="text-muted">Smart Contract</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 장점-item">
+          <a class="장점-link" data-toggle="modal" href="#장점Modal3">
+            <div class="장점-hover">
+              <div class="장점-hover-content">
+
+              </div>
+            </div>
+            <img class="img-fluid" src="img/장점/03-thumbnail.jpg" alt="">
+          </a>
+          <div class="장점-caption">
+              <p></p>
+            <h4>위변조 검증 증명</h4>
+            <p class="text-muted">Forgery and Alteration Verification Certificate</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 장점-item">
+          <a class="장점-link" data-toggle="modal" href="#장점Modal4">
+            <div class="장점-hover">
+              <div class="장점-hover-content">
+
+              </div>
+            </div>
+              <p></p>
+            <img class="img-fluid" src="img/장점/04-thumbnail.jpg" alt="">
+          </a>
+          <div class="장점-caption">
+              <p></p>
+            <h4>공인 전자 문서 관리소 대체</h4>
+            <p class="text-muted">Alternative to the Authorized Electronic Document Management Office</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 장점-item">
+          <a class="장점-link" data-toggle="modal" href="#장점Modal5">
+            <div class="장점-hover">
+              <div class="장점-hover-content">
+
+              </div>
+            </div>
+              <p></p>
+            <img class="img-fluid" src="img/장점/05-thumbnail.jpg" alt="">
+          </a>
+          <div class="장점-caption">
+              <p></p>
+            <h4>법적효력</h4>
+            <p class="text-muted">Legal Effect</p>
+          </div>
+        </div>
+		<div class="col-md-4 col-sm-6 장점-item">
+          <a class="장점-link" data-toggle="modal" href="#장점Modal6">
+            <div class="장점-hover">
+              <div class="장점-hover-content">
+
+              </div>
+            </div>
+              <p></p>
+            <img class="img-fluid" src="img/장점/01-thumbnail.jpg" alt="">
+          </a>
+          <div class="장점-caption">
+              <p></p>
+            <h4>편리함</h4>
+           <p class="text-muted">Comfortable</p>
+          </div>
+        </div>
+       </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy;  MMIM 2019</span>
+        </div>
+       <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Computer Information Engineering, C.I.E</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
